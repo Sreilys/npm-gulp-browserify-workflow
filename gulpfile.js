@@ -36,5 +36,12 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('builds/development/css'))
 });
 
+gulp.task('watch', function() {
+  gutil.log('watch task');
+  gulp.watch(coffeeSources, ['coffee']);
+  gulp.watch(jsSources, ['js']);
+  gulp.watch('components/sass/*.scss', ['sass']);
+});
+
 // default task run just with gulp
 gulp.task('default', ['js', 'sass']);

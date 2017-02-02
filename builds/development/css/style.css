@@ -1,6 +1,6 @@
 @import "http://fonts.googleapis.com/css?family=Patua+One|Inika";
 body {
-  background: #eddbbb;
+  background: #ff3333;
   font-family: "Inika", serif;
   font-size: 1.1em; }
 
@@ -45,36 +45,17 @@ section {
   display: table;
   clear: both; }
 
-.city {
-  background: url("../images/backgrounds/seattle_skyline.jpg") no-repeat 50% 20%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; }
-  @media (min-width: 801px) {
-    .city {
-      height: 350px; } }
-  @media (max-width: 800px) {
-    .city {
-      height: 150px; } }
-  @media (max-width: 300px) {
-    .city {
-      height: 100px; } }
-  .city img.logo {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50%;
-    max-width: 450px;
-    min-width: 250px; }
+.city img.logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  max-width: 450px;
+  min-width: 250px; }
 
 .featuredartists {
   background: #8D8862;
-  border-top: 20px solid #E3C692;
+  border-top: 20px solid red;
   border-bottom: 50px solid #507356; }
   .featuredartists h1 {
     font-size: 3em;
@@ -85,7 +66,7 @@ section {
   .featuredartists h2 {
     margin-top: 20px;
     font-size: 1.8em;
-    color: #dbb572; }
+    color: #d60000; }
     @media (max-width: 700px) {
       .featuredartists h2 {
         display: none; } }
@@ -96,7 +77,7 @@ section {
     .featuredartists .artistlist h2 {
       margin-top: 5px;
       font-size: 1.2em;
-      color: #ebd7b2; }
+      color: #ff2929; }
     .featuredartists .artistlist .item {
       min-width: 95px;
       color: #6f6b4d;
@@ -118,25 +99,7 @@ section {
   float: right; }
 
 .workshoppix {
-  background: url("../images/backgrounds/woodworking_workshop.jpg") no-repeat 50% 20%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
   border-bottom: 50px solid #8D8862; }
-  @media (min-width: 801px) {
-    .workshoppix {
-      height: 350px; } }
-  @media (max-width: 800px) {
-    .workshoppix {
-      height: 150px; } }
-  @media (max-width: 300px) {
-    .workshoppix {
-      height: 100px; } }
 
 .ontour h1 {
   color: #4d354c;
@@ -165,8 +128,7 @@ section {
 .pixgrid img {
   max-width: 90px;
   display: block;
-  padding: 0 5px 5px 0;
-  cursor: url(../images/misc/magnifying_glass.png), auto; }
+  padding: 0 5px 5px 0; }
 
 .pixgrid .preview img {
   padding: 0; }

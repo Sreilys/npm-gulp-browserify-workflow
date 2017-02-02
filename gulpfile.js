@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     concat = require('gulp-concat'),
+    connect = require('gulp-connect'),
     sass = require('gulp-sass'),
     browserify = require('gulp-browserify'),
     coffee = require('gulp-coffee');
@@ -27,6 +28,7 @@ gulp.task('js', ['coffee'], function() {
     .pipe(concat('script.js'))
     .pipe(browserify())
     .pipe(gulp.dest('builds/development/js'))
+    .pipe(connect.reload())
 });
 
 gulp.task('sass', function() {
@@ -34,6 +36,7 @@ gulp.task('sass', function() {
   gulp.src(sassSources)
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('builds/development/css'))
+    .pipe(connect.reload())
 });
 
 gulp.task('watch', function() {
@@ -43,5 +46,13 @@ gulp.task('watch', function() {
   gulp.watch('components/sass/*.scss', ['sass']);
 });
 
+gulp.task('connect', function() {
+  gutil.log('connect task');
+  connect.server({
+    root: 'builds/development',
+    livereload: true
+  })
+});
+
 // default task run just with gulp
-gulp.task('default', ['js', 'sass']);
+gulp.task('default', ['js', 'sass', 'watch', 'connect']);

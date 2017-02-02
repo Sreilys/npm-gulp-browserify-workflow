@@ -1,7 +1,6 @@
 // _modules.scss
 // ============
 .city {
-  @include backImage('../images/backgrounds/seattle_skyline.jpg');
   img.logo {
     position: absolute;
     right: 0;
@@ -77,7 +76,6 @@
 }
 
 .workshoppix {
-  @include backImage('../images/backgrounds/woodworking_workshop.jpg');
   border-bottom: 50px solid $darkGreenGold;
 } //workshops
 

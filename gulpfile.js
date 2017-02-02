@@ -21,7 +21,8 @@ gulp.task('coffee', function() {
     .pipe(gulp.dest('components/scripts'));
 });
 
-gulp.task('js', function() {
+gulp.task('js', ['coffee'], function() {
+  gutil.log('js task');
   gulp.src(jsSources)
     .pipe(concat('script.js'))
     .pipe(browserify())
@@ -29,7 +30,11 @@ gulp.task('js', function() {
 });
 
 gulp.task('sass', function() {
+  gutil.log('sass task');
   gulp.src(sassSources)
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('builds/development/css'))
 });
+
+// default task run just with gulp
+gulp.task('default', ['js', 'sass']);

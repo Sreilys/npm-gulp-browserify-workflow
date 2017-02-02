@@ -11,5 +11,8 @@
     "url": "?.git"
   },
   "author": "Sabrina Bosco",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
